@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: rgb(223, 192, 248);
+    color: rgb(71, 45, 65);
+    display: flex;
+    height: max-content;
+    padding: 10px;
+}
+header div{
+    margin-left: auto;
+    margin-top: auto;
+    display: flex;
+}
+header form{
+    margin: 5px;
+}
+.postForm{
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: 5px 5px 4px#d2ced3;
+    background-color: rgb(242, 223, 255);
+    padding: 10px;
+}
+
+.postForm button{
+    display: flex;
+    margin:auto;
+}
+
+.postForm div{
+    width: 90%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 100px 90%;
+    grid-template-rows: auto max-content auto;
+}
+
+.l1{
+    margin: 5px;
+    height: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.l2{
+    margin: 5px;
+    min-height: 100px;
+    grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+}
+.l3{
+    margin: 5px;
+    height: 20px;
+    grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
+.r1{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+}
+.r2{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+}
+.r3{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Update Post</h1>
+        <div>
+            <form action="/" method="get"><button>Home</button></form>
+        </div>
+    </header>
+    <form class="postForm" action="/<%= blogs._id%>/update?_method=Put" method="post">
+        <div><label class="l1" for="topic">Topic:</label><input class="r1" type="text" name="topic"
+                value=<%=blogs.topic%>><br><label class="l2" for="description">Description:</label><textarea class="r2"
+                type="textArea" name="description"><%=blogs.description%></textarea><br><label class="l3"
+                for="author">Author:</label><input class="r3" type="text" name="posted_by" value=<%=blogs.posted_by%>></div>
+        <button>Post</button>
+    </form>
+</body>
+
+</html>

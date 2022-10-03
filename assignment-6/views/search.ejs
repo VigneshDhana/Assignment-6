@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Search Blog</h1>
+        <div>
+            <form action="/create" method="get">
+                <button>New Post</button>
+            </form>
+            <form action="/" method="get">
+                <button>Home</button>
+            </form>
+            <form action="/search" method="post">
+                <input type="text" id="search" name="search" value="">
+                <button>Search</button>
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <%if(blogs.length > 0){%>
+        <% blogs.forEach((blog)=>{%>
+            <div class="blog">
+                <div class="head">
+                    <h2>
+                        <%= blog.topic%>
+                    </h2>
+                </div>
+                <div class="des">
+                    <p>
+                        <%= blog.description%>
+                    </p>
+                </div>
+                <div class="postDetails">
+                    <p class="author">
+                        <%= blog.posted_by%>
+                    </p>
+                    <p class="time">
+                        <%= blog.posted_at%>
+                    </p>
+                </div>
+                <div class="btn">
+                    <div>
+                        <form action="/<%= blog._id%>/edit" method="GET">
+                            <button>Edit</button>
+                        </form>
+                        <form action="/<%= blog._id%>/delete?_method=DELETE" method="post">
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <%})} else{%>
+                <p>Invalid topic</p>
+                <%}%>
+    </div>
+</body>
+
+</html>

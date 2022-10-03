@@ -1,0 +1,129 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: rgb(223, 192, 248);
+    color: rgb(71, 45, 65);
+    display: flex;
+    height: max-content;
+    padding: 10px;
+}
+header div{
+    margin-left: auto;
+    margin-top: auto;
+    display: flex;
+}
+header form{
+    margin: 5px;
+}
+.container{
+    width: 50%;
+    margin: auto;
+}
+.blog{
+    height: max-content;
+box-shadow: 5px 5px 4px#d2ced3;
+    width: 100%;
+    margin: 2px;
+    background-color: rgb(242, 223, 255);
+}
+.head{
+    color: rgb(71, 45, 65);;
+    text-align: center;
+    background-color: aliceblue;
+}
+.des{
+    text-align: justify;
+    height: max-content;
+    margin: 10px;
+}
+.postDetails{
+    display: flex;
+    margin: 10px;
+}
+.author{
+    float: left;
+    color: rgb(140, 143, 143);
+}
+.time{
+    font-size: small;
+    margin-left: auto;
+    color: rgb(140, 143, 143);
+}
+.btn{
+    display: flex;
+    margin: auto;
+}
+.btn div{
+    margin: auto;
+    display: flex;
+}
+.btn form{
+    margin: 5px 10px;
+}
+.postForm{
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: 5px 5px 4px#d2ced3;
+    background-color: rgb(242, 223, 255);
+    padding: 10px;
+}
+
+.postForm button{
+    display: flex;
+    margin:auto;
+}
+
+.postForm div{
+    width: 90%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 100px 90%;
+    grid-template-rows: auto max-content auto;
+}
+
+.l1{
+    margin: 5px;
+    height: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.l2{
+    margin: 5px;
+    min-height: 100px;
+    grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+}
+.l3{
+    margin: 5px;
+    height: 20px;
+    grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
+.r1{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+}
+.r2{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+}
+.r3{
+    margin: 5px;
+    grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
